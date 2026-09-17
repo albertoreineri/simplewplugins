@@ -19,3 +19,7 @@ RewriteRule ^([a-z0-9-]+)/?$ $1.php [L]
 <FilesMatch "\.(md|lock)$">
     Require all denied
 </FilesMatch>
+
+# Never expose the .git directory or CI metadata (this site is deployed via `git pull`
+# straight into public_html, so .git lives inside the webroot).
+RedirectMatch 404 ^/\.(git|github)($|/)
