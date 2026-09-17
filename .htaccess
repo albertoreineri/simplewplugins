@@ -1,0 +1,21 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# /blog/some-post-slug -> blog/post.php?slug=some-post-slug
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog/post.php?slug=$1 [L,QSA]
+
+# /sitemap.xml -> sitemap.php
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# /about -> about.php, /contact -> contact.php, and any future top-level page
+# named the same way, as long as the matching .php file actually exists.
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-z0-9-]+)/?$ $1.php [L]
+</IfModule>
+
+# Never serve markdown source, vendor internals, or composer files directly.
+<FilesMatch "\.(md|lock)$">
+    Require all denied
+</FilesMatch>
