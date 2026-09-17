@@ -21,6 +21,27 @@ Back up only the database, and you'll restore a site with broken images and miss
 
 It's also worth keeping a copy of `wp-config.php`, since it holds your database connection details and security keys — useful if you're rebuilding a site from scratch rather than restoring it in place.
 
+## How to actually do it: three ways to back up WordPress
+
+**With a free plugin.** [UpdraftPlus](https://wordpress.org/plugins/updraftplus/) is the most-installed backup plugin on WordPress.org, and the free version already covers the basics: install it, go to **Settings > UpdraftPlus Backups > Settings**, pick a remote storage destination (Google Drive, Dropbox, and S3 all work on the free tier), set a schedule for both files and database, then click **Backup Now** once to confirm it actually completes and lands in that remote storage. [Duplicator](https://wordpress.org/plugins/duplicator/) is a solid free alternative, built more around packaging a full copy of your site — database and files in one bundle — that doubles as a migration tool, not just a restore point.
+
+**With a paid plugin or service.** Once a site matters enough that you don't want to think about backups at all, paying for one removes the manual setup: [UpdraftPlus Premium](https://updraftplus.com/), [WPvivid Backup Pro](https://wpvivid.com/), and [BlogVault](https://blogvault.net/) all add automatic off-site storage included in the price, incremental backups (so a 5GB site doesn't re-upload 5GB every night), and one-click restores without needing SSH or phpMyAdmin. BlogVault in particular runs the backup process on its own servers instead of your host's, which matters if your hosting is already struggling under load.
+
+**By hand, with WP-CLI.** If you're comfortable in a terminal and just want a quick manual backup — before a risky update, for example — you don't need a plugin at all:
+
+```bash
+# Export the database
+wp db export backup-db.sql
+
+# Archive the wp-content folder (themes, plugins, uploads)
+tar -czf backup-wp-content.tar.gz wp-content/
+
+# Bundle both into one file to move off-server
+zip backup-full.zip backup-db.sql backup-wp-content.tar.gz
+```
+
+Then get `backup-full.zip` off the server — download it over SFTP, or `scp` it straight to another machine. This isn't something you'd run manually every day, but it's the fastest way to have a real, working backup in hand in under a minute.
+
 ## Don't store your only backup on the same server
 
 This is the mistake that turns a bad day into a disaster: a backup that lives in the same hosting account as the site it's backing up. If your server gets compromised, wiped, or simply goes offline for good, your backup disappears with it.
