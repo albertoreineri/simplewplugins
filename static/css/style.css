@@ -195,6 +195,30 @@ body {
 .post-single .post-body a {
     color: var(--orange);
 }
+.post-single .post-body pre {
+    background: var(--ink);
+    color: #e5e7eb;
+    padding: 20px 24px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 24px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.post-single .post-body pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+.post-single .post-body code {
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
 .post-single .plugin-callout {
     margin-top: 40px;
     padding: 24px;
