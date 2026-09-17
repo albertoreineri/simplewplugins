@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+{{- $orgId := printf "%s#organization" site.BaseURL }}
+{{- $graph := slice
+    (dict
+        "@type" "Organization"
+        "@id" $orgId
+        "name" site.Title
+        "url" site.BaseURL
+        "logo" (site.Params.ogImage | absURL)
+    )
+    (dict
+        "@type" "WebSite"
+        "@id" (printf "%s#website" site.BaseURL)
+        "name" site.Title
+        "url" site.BaseURL
+        "publisher" (dict "@id" $orgId)
+    )
+-}}
+
+{{- if and (eq .Section "blog") (not .IsSection) }}
+{{- $graph = $graph | append (dict
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" .Description
+    "datePublished" (.Date.Format "2006-01-02")
+    "url" .Permalink
+    "author" (dict "@id" $orgId)
+    "publisher" (dict "@id" $orgId)
+) }}
+{{- end }}
+
+{{- if .IsHome }}
+{{- $items := slice }}
+{{- range $i, $p := site.Data.plugins }}
+    {{- $url := printf "%s#%s" site.BaseURL $p.slug }}
+    {{- if $p.wporg }}{{ $url = printf "https://wordpress.org/plugins/%s/" $p.wporg }}{{ end }}
+    {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" (add $i 1)
+        "item" (dict
+            "@type" "SoftwareApplication"
+            "name" $p.name
+            "description" $p.tagline
+            "applicationCategory" "WordPress Plugin"
+            "operatingSystem" "WordPress"
+            "url" $url
+        )
+    ) }}
+{{- end }}
+{{- $graph = $graph | append (dict "@type" "ItemList" "itemListElement" $items) }}
+{{- end }}
+
+{{ (dict "@context" "https://schema.org" "@graph" $graph) | jsonify | safeJS }}
+</script>

@@ -1,0 +1,12 @@
+<header class="site-header">
+    <div class="wrap site-header-inner">
+        <a href="/" class="brand">
+            <span class="brand-dot"></span>{{ site.Title }}
+        </a>
+        <nav>
+            {{ range site.Menus.main }}
+                <a href="{{ .URL }}" class="{{ if eq $.RelPermalink .URL }}active{{ end }}">{{ .Name }}</a>
+            {{ end }}
+        </nav>
+    </div>
+</header>

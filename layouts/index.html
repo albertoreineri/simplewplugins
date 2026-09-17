@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="wrap">
+        <h1>Small, focused WordPress plugins.</h1>
+        <p>{{ site.Params.tagline }} No bloat, no upsells buried in your dashboard — just the one feature you installed it for.</p>
+    </div>
+</section>
+
+<section class="wrap">
+    <div class="plugin-grid">
+        {{ range site.Data.plugins }}
+            {{ $href := printf "%s#%s" site.BaseURL .slug }}
+            {{ if .wporg }}{{ $href = printf "https://wordpress.org/plugins/%s/" .wporg }}{{ end }}
+            <a id="{{ .slug }}" class="plugin-card" href="{{ $href }}" {{ if .wporg }}target="_blank" rel="noopener noreferrer"{{ end }}>
+                <img src="/img/plugins/{{ .slug }}.png" alt="{{ .name }}">
+                <h3>{{ .name }}</h3>
+                <p>{{ .tagline }}</p>
+                <span class="badge {{ if .wporg }}live{{ else }}soon{{ end }}">
+                    {{ if .wporg }}Get it on WordPress.org{{ else }}Coming soon{{ end }}
+                </span>
+            </a>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

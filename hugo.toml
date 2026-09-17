@@ -1,0 +1,37 @@
+baseURL = "https://simplewplugins.com/"
+locale = "en-us"
+title = "SimpleWPlugins"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  tagline = "Small, focused WordPress plugins that do one thing well."
+  email = "hello@simplewplugins.com"
+  ga4_id = "G-T0WPTSSXM3"
+  ogImage = "/img/og-image.png"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 20
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 30
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 40

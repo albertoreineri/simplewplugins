@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="blog-list wrap">
+    <h1>{{ .Title }}</h1>
+
+    {{ $posts := .Pages.ByDate.Reverse }}
+    {{ if eq (len $posts) 0 }}
+        <p>No posts yet — check back soon.</p>
+    {{ end }}
+
+    {{ range $posts }}
+        <article class="post-preview">
+            <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description }}</p>
+        </article>
+    {{ end }}
+</section>
+{{ end }}

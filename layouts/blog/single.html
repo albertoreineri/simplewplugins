@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="post-single wrap">
+    <a class="back-link" href="/blog/">← Back to the blog</a>
+    <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+    <h1>{{ .Title }}</h1>
+
+    <div class="post-body">
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.plugin }}
+        {{ $slug := . }}
+        {{ range site.Data.plugins }}
+            {{ if eq .slug $slug }}
+                {{ $url := printf "%s#%s" site.BaseURL .slug }}
+                {{ if .wporg }}{{ $url = printf "https://wordpress.org/plugins/%s/" .wporg }}{{ end }}
+                <div class="plugin-callout">
+                    <p style="margin:0 0 6px;color:#6b7280;font-size:13px;text-transform:uppercase;letter-spacing:.5px;">Mentioned in this post</p>
+                    <a href="{{ $url }}">{{ .name }} →</a>
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</article>
+{{ end }}
