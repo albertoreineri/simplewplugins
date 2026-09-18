@@ -34,6 +34,9 @@
                 'ad_user_data': value,
                 'ad_personalization': value
             });
+            if (value === 'granted') {
+                window.gtag('event', 'page_view');
+            }
         }
         banner.hidden = true;
     }
