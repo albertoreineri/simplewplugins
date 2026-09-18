@@ -1,11 +1,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) — gated by Consent Mode v2; see cookie banner in footer -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.ga4_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
+  (function () {
+    var granted = false;
+    try { granted = localStorage.getItem('sw_consent') === 'granted'; } catch (e) {}
+    var state = granted ? 'granted' : 'denied';
+    gtag('consent', 'default', {
+      'analytics_storage': state,
+      'ad_storage': state,
+      'ad_user_data': state,
+      'ad_personalization': state
+    });
+  })();
+
   gtag('js', new Date());
   gtag('config', '{{ site.Params.ga4_id }}');
 </script>
