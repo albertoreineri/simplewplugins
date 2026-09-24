@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="300" fill="#ffffff"/>
+
+  <rect x="20" y="110" width="180" height="80" rx="12" fill="#111827"/>
+  <text x="110" y="146" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Bot / attacker</text>
+  <text x="110" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#d1d5db">login attempt</text>
+
+  <rect x="260" y="30" width="190" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="355" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Hidden login URL</text>
+  <text x="355" y="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">/wp-login.php → 404</text>
+
+  <rect x="260" y="190" width="190" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="355" y="222" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">XML-RPC disabled</text>
+  <text x="355" y="244" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">no bulk password guessing</text>
+
+  <rect x="530" y="110" width="200" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="630" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Rate limit + lockout</text>
+  <text x="630" y="164" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">IP blocked after N tries</text>
+
+  <rect x="810" y="110" width="200" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="910" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Two-factor code</text>
+  <text x="910" y="164" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">password alone isn't enough</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <line x1="200" y1="140" x2="250" y2="80" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="200" y1="160" x2="250" y2="220" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="450" y1="80" x2="520" y2="135" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="450" y1="220" x2="520" y2="165" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="730" y1="150" x2="800" y2="150" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1030" y="110" width="60" height="80" rx="12" fill="#FF5513"/>
+  <text x="1060" y="145" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">✓</text>
+  <text x="1060" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#111827">Dashboard</text>
+  <text x="1060" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#111827">protected</text>
+
+  <line x1="1010" y1="150" x2="1025" y2="150" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
