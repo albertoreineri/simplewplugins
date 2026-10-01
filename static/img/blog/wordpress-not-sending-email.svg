@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="420" fill="#ffffff"/>
+
+  <!-- Start -->
+  <rect x="30" y="170" width="230" height="80" rx="12" fill="#111827"/>
+  <text x="145" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">WordPress</text>
+  <text x="145" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d1d5db">wp_mail() call</text>
+
+  <!-- Top path: default, unauthenticated -->
+  <rect x="400" y="30" width="260" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="530" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">PHP mail()</text>
+  <text x="530" y="83" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">no SPF / DKIM</text>
+  <text x="530" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">often disabled by host</text>
+
+  <rect x="790" y="30" width="260" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="920" y="68" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Spam folder</text>
+  <text x="920" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">or dropped silently</text>
+
+  <!-- Bottom path: SMTP plugin, authenticated -->
+  <rect x="400" y="310" width="260" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="530" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">SMTP / email API</text>
+  <text x="530" y="361" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">WP Mail SMTP, FluentSMTP...</text>
+  <text x="530" y="379" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">authenticated with SPF / DKIM</text>
+
+  <rect x="790" y="315" width="260" height="80" rx="12" fill="#FF5513"/>
+  <text x="920" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Inbox</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <line x1="260" y1="195" x2="390" y2="90" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="230" x2="390" y2="345" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="70" x2="780" y2="70" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="355" x2="780" y2="355" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
