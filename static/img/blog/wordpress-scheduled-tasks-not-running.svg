@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1100 340" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="340" fill="#ffffff"/>
+
+  <text x="40" y="40" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">PSEUDO-CRON (DEFAULT)</text>
+
+  <rect x="40" y="60" width="190" height="70" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="135" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Visitor loads a page</text>
+  <text x="135" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">random timing</text>
+
+  <rect x="300" y="60" width="210" height="70" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="405" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">wp-cron.php fires</text>
+  <text x="405" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">only if a visit happens</text>
+
+  <rect x="580" y="60" width="230" height="70" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="6,5"/>
+  <text x="695" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Task runs late or skipped</text>
+  <text x="695" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">low traffic, caching, slow requests</text>
+
+  <text x="40" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">REAL SERVER CRON</text>
+
+  <rect x="40" y="215" width="190" height="70" rx="12" fill="#111827"/>
+  <text x="135" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">crontab entry</text>
+  <text x="135" y="265" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#d1d5db">every 5 minutes, fixed</text>
+
+  <rect x="300" y="215" width="210" height="70" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="405" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">wp cron event run</text>
+  <text x="405" y="265" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">or curl wp-cron.php</text>
+
+  <rect x="580" y="215" width="230" height="70" rx="12" fill="#FF5513"/>
+  <text x="695" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Task runs on time</text>
+  <text x="695" y="265" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#ffffff">every time, independent of visitors</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <line x1="230" y1="95" x2="295" y2="95" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="510" y1="95" x2="575" y2="95" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <line x1="230" y1="250" x2="295" y2="250" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="510" y1="250" x2="575" y2="250" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
