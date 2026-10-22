@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="420" fill="#ffffff"/>
+
+  <!-- Request path -->
+  <rect x="30" y="170" width="190" height="80" rx="12" fill="#111827"/>
+  <text x="125" y="212" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Bot / Attacker</text>
+  <text x="125" y="232" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#d1d5db">POST /xmlrpc.php</text>
+
+  <rect x="310" y="170" width="220" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="420" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Web server</text>
+  <text x="420" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">Apache / nginx</text>
+
+  <rect x="620" y="170" width="220" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="730" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">WordPress</text>
+  <text x="730" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">PHP + xmlrpc_enabled</text>
+
+  <rect x="930" y="170" width="140" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="1000" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#111827">XML-RPC</text>
+  <text x="1000" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">handler runs</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+  <line x1="220" y1="210" x2="300" y2="210" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="530" y1="210" x2="610" y2="210" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="840" y1="210" x2="920" y2="210" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Intercept callouts -->
+  <rect x="300" y="300" width="240" height="90" rx="12" fill="#FF5513"/>
+  <text x="420" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Server-level block</text>
+  <text x="420" y="352" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#ffffff">403, no PHP started,</text>
+  <text x="420" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#ffffff">no server resources used</text>
+
+  <rect x="610" y="300" width="240" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="730" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">xmlrpc_enabled filter</text>
+  <text x="730" y="352" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">PHP already loaded,</text>
+  <text x="730" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">then request is refused</text>
+
+  <line x1="420" y1="300" x2="420" y2="255" stroke="#d1d5db" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="730" y1="300" x2="730" y2="255" stroke="#d1d5db" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
