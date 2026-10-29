@@ -1,0 +1,39 @@
+<svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="420" fill="#ffffff"/>
+
+  <!-- Start -->
+  <rect x="30" y="170" width="230" height="80" rx="12" fill="#111827"/>
+  <text x="145" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">.svg file</text>
+  <text x="145" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d1d5db">uploaded to WordPress</text>
+
+  <!-- Top path: filter only, no sanitization -->
+  <rect x="400" y="30" width="260" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="530" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">upload_mimes filter</text>
+  <text x="530" y="83" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">extension allowed,</text>
+  <text x="530" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">content never checked</text>
+
+  <rect x="790" y="30" width="260" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="920" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Stored XSS risk</text>
+  <text x="920" y="83" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">script/onload can run</text>
+  <text x="920" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">when the file is opened</text>
+
+  <!-- Bottom path: sanitizing plugin -->
+  <rect x="400" y="310" width="260" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="530" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Sanitizer library</text>
+  <text x="530" y="361" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">Safe SVG, SVG Support...</text>
+  <text x="530" y="379" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">strips script/on* before save</text>
+
+  <rect x="790" y="315" width="260" height="80" rx="12" fill="#FF5513"/>
+  <text x="920" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Safe in Media Library</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <line x1="260" y1="195" x2="390" y2="90" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="230" x2="390" y2="345" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="75" x2="780" y2="75" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="355" x2="780" y2="355" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
