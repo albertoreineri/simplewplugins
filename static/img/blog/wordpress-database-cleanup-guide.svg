@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1100 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="1100" height="420" fill="#ffffff"/>
+
+  <!-- Start: what accumulates -->
+  <rect x="20" y="170" width="220" height="90" rx="12" fill="#111827"/>
+  <text x="130" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Revisions, transients,</text>
+  <text x="130" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">leftover plugin data</text>
+
+  <!-- Middle: the bloat -->
+  <rect x="320" y="170" width="220" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="430" y="203" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Bloated wp_options</text>
+  <text x="430" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">&amp; wp_posts tables</text>
+  <text x="430" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">slow queries, high memory use</text>
+
+  <!-- Top path: WP-CLI -->
+  <rect x="620" y="30" width="250" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="745" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">WP-CLI commands</text>
+  <text x="745" y="83" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">wp transient delete --expired</text>
+  <text x="745" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">wp post delete (revisions), wp db optimize</text>
+
+  <!-- Bottom path: plugin -->
+  <rect x="620" y="300" width="250" height="90" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="745" y="332" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#111827">Cleanup plugin</text>
+  <text x="745" y="353" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">WP-Optimize, WP-Sweep,</text>
+  <text x="745" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">Advanced Database Cleaner</text>
+
+  <!-- End: result -->
+  <rect x="930" y="170" width="150" height="90" rx="12" fill="#FF5513"/>
+  <text x="1005" y="207" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Smaller, faster</text>
+  <text x="1005" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">database</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <line x1="240" y1="215" x2="310" y2="215" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="540" y1="195" x2="610" y2="100" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="540" y1="235" x2="610" y2="330" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="870" y1="95" x2="925" y2="195" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="870" y1="335" x2="925" y2="235" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
