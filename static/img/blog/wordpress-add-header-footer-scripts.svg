@@ -1,0 +1,54 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img">
+  <rect width="900" height="520" fill="#ffffff"/>
+
+  <!-- Page outline -->
+  <rect x="260" y="20" width="380" height="480" rx="14" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="450" y="50" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#111827">Your WordPress page</text>
+
+  <!-- head section -->
+  <rect x="285" y="70" width="330" height="70" rx="10" fill="#111827"/>
+  <text x="450" y="97" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">&lt;head&gt;</text>
+  <text x="450" y="118" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#d1d5db">page meta, styles</text>
+
+  <!-- body open -->
+  <rect x="285" y="250" width="330" height="40" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="450" y="274" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#6b7280">&lt;body&gt; opens</text>
+
+  <!-- content -->
+  <rect x="285" y="300" width="330" height="90" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="450" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#111827">Page content</text>
+  <text x="450" y="362" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">header, posts, footer markup</text>
+
+  <!-- body close -->
+  <rect x="285" y="460" width="330" height="30" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="450" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">&lt;/body&gt; closes</text>
+
+  <!-- Hook callouts (orange, outside the page box, pointing in) -->
+  <rect x="660" y="80" width="200" height="60" rx="10" fill="#FF5513"/>
+  <text x="760" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">wp_head</text>
+  <text x="760" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ffe8dc">analytics, meta pixels</text>
+
+  <rect x="660" y="235" width="200" height="60" rx="10" fill="#FF5513"/>
+  <text x="760" y="259" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">wp_body_open</text>
+  <text x="760" y="279" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ffe8dc">GTM noscript fallback</text>
+
+  <rect x="660" y="430" width="200" height="60" rx="10" fill="#FF5513"/>
+  <text x="760" y="454" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">wp_footer</text>
+  <text x="760" y="474" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ffe8dc">non-blocking scripts</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+  <line x1="655" y1="110" x2="620" y2="105" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="655" y1="265" x2="620" y2="268" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="655" y1="460" x2="620" y2="475" stroke="#d1d5db" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- left label: what NOT to touch -->
+  <rect x="40" y="70" width="190" height="90" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="6,5"/>
+  <text x="135" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#111827">header.php</text>
+  <text x="135" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">overwritten on</text>
+  <text x="135" y="136" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6b7280">every theme update</text>
+  <line x1="80" y1="155" x2="190" y2="80" stroke="#6b7280" stroke-width="2"/>
+</svg>
